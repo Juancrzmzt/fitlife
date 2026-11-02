@@ -1,0 +1,309 @@
+/* Reinicio y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #111111;
+    background-color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Contenedor centrado con margen a los lados */
+.contenedor {
+    width: 1100px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Limpia los float */
+.contenedor::after,
+.fila::after,
+footer .contenedor::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*Menú*/
+header {
+    background-color: #111111;
+    height: 60px;
+}
+
+.logo {
+    float: left;
+    line-height: 60px;
+    margin-right: 80px;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+nav li {
+    float: left;
+    margin-right: 25px;
+}
+
+nav a {
+    display: block;
+    line-height: 60px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+nav a.activo {
+    font-weight: bold;
+}
+
+nav li.carrito {
+    float: right;
+    margin-right: 0;
+}
+
+/* Efecto hover del menú: la letra pasa de blanca a roja */
+nav a:hover {
+    color: #E63946;
+}
+
+/* ===== Banner ===== */
+.banner {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 60px 0;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.banner h1 {
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.banner p {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 30px;
+}
+
+.boton-banner {
+    display: inline-block;
+    padding: 14px 50px;
+    background-color: #1D4ED8;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.boton-banner:hover {
+    background-color: #E63946;
+}
+
+/*Títulos de sección*/
+main section h2 {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #111111;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 24px;
+}
+
+.categorias {
+    padding: 40px 0;
+}
+
+.productos {
+    padding: 20px 0 60px 0;
+}
+
+.tarjeta-categoria {
+    float: left;
+    width: 196px;
+    margin-right: 20px;
+    border: 1px solid #DDDDDD;
+    text-align: center;
+}
+
+.tarjeta-categoria:last-child {
+    margin-right: 0;
+}
+
+.tarjeta-categoria a {
+    display: block;
+    padding: 15px;
+    color: #111111;
+}
+
+.tarjeta-categoria img {
+    height: 110px;
+    width: auto;
+    margin: 0 auto 15px auto;
+}
+
+.tarjeta-categoria h3 {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Efecto hover de tarjetas: el borde gris pasa a rojo */
+.tarjeta-categoria:hover,
+.tarjeta-producto:hover {
+    border-color: #E63946;
+}
+
+/* ===== Tarjetas de producto (4 por fila) ===== */
+.tarjeta-producto {
+    float: left;
+    width: 250px;
+    margin-right: 20px;
+    padding: 15px;
+    border: 1px solid #DDDDDD;
+}
+
+.tarjeta-producto:last-child {
+    margin-right: 0;
+}
+
+.tarjeta-producto img {
+    height: 170px;
+    width: auto;
+    margin: 0 auto 15px auto;
+}
+
+.marca {
+    font-size: 12px;
+    color: #555555;
+    margin-bottom: 5px;
+}
+
+.tarjeta-producto h3 {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.descripcion {
+    height: 54px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #555555;
+}
+
+.precio {
+    margin: 15px 0 10px 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* ===== Botones ===== */
+.tarjeta-producto button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background-color: #1D4ED8;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Efecto hover de botones: el fondo pasa de azul a rojo */
+.tarjeta-producto button:hover {
+    background-color: #E63946;
+}
+
+/* ===== Página del catálogo ===== */
+.titulo-pagina {
+    padding: 30px 0 20px 0;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.titulo-pagina h1 {
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.titulo-pagina p {
+    font-size: 14px;
+    color: #555555;
+}
+
+.catalogo .fila {
+    padding: 30px 0 40px 0;
+}
+
+/* Mismas tarjetas del inicio, pero más anchas: 3 por fila */
+.catalogo .tarjeta-producto {
+    width: 340px;
+    margin-bottom: 20px;
+}
+
+.catalogo .tarjeta-producto:nth-child(3n+1) {
+    clear: left;
+}
+
+.catalogo .tarjeta-producto:nth-child(3n) {
+    margin-right: 0;
+}
+
+.catalogo .tarjeta-producto img {
+    height: 200px;
+}
+
+/* ===== Pie de página ===== */
+footer {
+    background-color: #111111;
+    color: #FFFFFF;
+    padding: 30px 0 20px 0;
+}
+
+footer .columna {
+    float: left;
+    width: 33.33%;
+}
+
+footer h4 {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+footer .derechos {
+    clear: both;
+    padding-top: 25px;
+    text-align: center;
+    font-size: 12px;
+    color: #DDDDDD;
+}
